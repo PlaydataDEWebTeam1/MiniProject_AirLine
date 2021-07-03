@@ -3,6 +3,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>메인페이지</title>
+
+<!-- js : external -->
+<script type="text/javascript" src="js/startingPoint.js"></script>
+<script type="text/javascript" src="js/departure.js"></script>
+<script type="text/javascript" src="js/boardingDate.js"></script>
+<script type="text/javascript" src="js/selectNumberOfMember.js"></script>
+
 <!-- css external -->
 <link type="text/css" rel="stylesheet" href="css/mainPage.css">
 </head>
@@ -30,15 +37,15 @@
 <!-- 출발지, 도작치 -->
 <div class="start_end"> 
 	<div>
-	<a href="startingPoint.html">출발지 선택 </a>
+	<a href="#" onclick = "openStartPointWindow()">출발지 선택 </a>
 	<br>
-	<input type="text">
+	<input type="text" id="startingPoint" value="서울/인천" readonly>
 	</div>
 	
 	<div>
-	<a href="departure.html">도착지 선택</a>
+	<a href="#" onclick = "openDepartureWindow()">도착지 선택</a>
 	<br>
-	<input type="text">
+	<input type="text" id="departure" value="도착지" readonly>
 	</div>
 	
 </div>
@@ -47,25 +54,45 @@
 달력이 나오고 하나 누르면 편도, 두개 누르면 왕복
  -->
 <div class="boardingDate">
-	<a href="boardingDate.html">탑승일</a>
+	<a href="#" onclick = "openBoardingDateWindow()">탑승일</a>
 	<br>
-	<input type="text">
+	<span>가는 날</span>
+	<input type="text" id="goDate" readonly>
+	<br>
+	<br>
+	<span>오는 날</span>
+	<input type="text" id="comeDate" readonly>
 </div>
 
 <!-- 인원수 선택 
 성인 소아 유아
 -->
 <div class="selectNumberOfMember">
-	<a href="selectNumberOfMember.html">인원수 선택</a>
+	<a href="#" onclick = "openNumberWindow()">인원수 선택</a>
 	<br>
-	<input type="text">
+	<div>
+	<span>성인</span>
+	<input type="text" id="adultNumber" value="1" readonly>
+	</div>
+	
+	<div>
+	<span>소아</span>
+	<input type="text" id="childNumber" readonly>
+	</div>
+	
+	<div>
+	<span>유아</span>
+	<input type="text" id="babyNumber" readonly>
+	</div>
+	
 </div>
 
 <!--  좌석 등급 선택  -->
 <div class="selectSeat">좌석 등급 선택</div>
 <div class="selectSeat">
 	<select>
-		<option>일반석</option>
+		<option>좌석선택</option>
+		<option>이코노미석</option>
 		<option>비지니스석</option>
 		<option>퍼스트석</option>
 	</select>

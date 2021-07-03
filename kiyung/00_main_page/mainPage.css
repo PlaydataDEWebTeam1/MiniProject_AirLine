@@ -15,6 +15,8 @@ img {
 div {
 	margin-top:10px;
 }
+
+
 /* 공항, 비행기, 여행지 정보 */
 
 /* 모든 a 태그 밑줄 제거 */
@@ -89,3 +91,5 @@ a.airLineList{
 div.button{
 	text-align:right;
 }
+
+
