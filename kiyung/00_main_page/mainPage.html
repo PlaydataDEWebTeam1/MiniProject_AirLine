@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>메인페이지</title>
+<!-- css external -->
+<link type="text/css" rel="stylesheet" href="css/mainPage.css">
+</head>
+<h3>메인페이지</h3>
+<body>
+<!-- 페이지 로고 -->
+<div class="mainLogo">
+	<a href="mainPage.html"><img src="images/image1.png"></a>
+</div>
+
+<!-- 공항, 비행기 정보 -->
+<div class="impormation">
+	<a class="airport" href="airport.html">공항</a>
+	<a class="planeButton" href="plane.html">비행기</a>
+	<a class="travelButton" href="travel.html">여행지</a>
+</div>
+
+<!--  로그인 -->
+<div class="loginButtion">
+<a href="login.html">로그인</a>
+</div>
+<hr>
+<br>
+
+<!-- 출발지, 도작치 -->
+<div class="start_end"> 
+	<div>
+	<a href="startingPoint.html">출발지 선택 </a>
+	<br>
+	<input type="text">
+	</div>
+	
+	<div>
+	<a href="departure.html">도착지 선택</a>
+	<br>
+	<input type="text">
+	</div>
+	
+</div>
+
+<!--  탑승일, 도착일 선택
+달력이 나오고 하나 누르면 편도, 두개 누르면 왕복
+ -->
+<div class="boardingDate">
+	<a href="boardingDate.html">탑승일</a>
+	<br>
+	<input type="text">
+</div>
+
+<!-- 인원수 선택 
+성인 소아 유아
+-->
+<div class="selectNumberOfMember">
+	<a href="selectNumberOfMember.html">인원수 선택</a>
+	<br>
+	<input type="text">
+</div>
+
+<!--  좌석 등급 선택  -->
+<div class="selectSeat">좌석 등급 선택</div>
+<div class="selectSeat">
+	<select>
+		<option>일반석</option>
+		<option>비지니스석</option>
+		<option>퍼스트석</option>
+	</select>
+</div>
+
+<hr>
+<!-- 비행기 조회 -->
+<div class="button">
+	<input type="button" value="비행기조회">
+</div>
+<br>
+<!--  예약조회, 체크인, 항공편 현황 -->
+<div class="menu">
+	<a class="checkBooking" href="checkBooking">예약조회 선택</a>
+	<a class="checkIn" href="checkIn">체크인</a>
+	<a class="airLineList" href="airLineList">항공편</a>
+</div>
+
+</body>
+</html>
