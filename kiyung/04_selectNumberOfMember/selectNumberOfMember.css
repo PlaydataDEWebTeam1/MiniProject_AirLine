@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+/* 로고 */
+
+div.mainLogo {
+	display:inline;
+	
+}
+
+img {
+	width : 30px;
+	height: 30px;
+}
+
+/* 전체 위 간격 */
+div {
+	margin-top:10px;
+	text-align:center;
+}
+
