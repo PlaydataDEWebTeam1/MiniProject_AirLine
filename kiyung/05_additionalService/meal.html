@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>기내식 선택</title>
+<!-- js : external -->
+<script type="text/javascript" src="js/additionalService.js"></script>
+
+<!-- css external -->
+<link type="text/css" rel="stylesheet" href="css/meal.css">
+
+</head>
+<h3>기내식 선택</h3>
+<!-- select box 이용 버전-->
+<body>
+<!-- 페이지 로고 -->
+<div class="mainLogo">
+	<a href="mainPage.html"><img src="images/image1.png"></a>
+</div>
+<hr>
+<!-- 기내식 선택 select box -->
+<div class="selectbox">
+	<select name="selectBox" id="selectBox" onchange="inputMeal()">
+		<option value="">기내식 선택</option>
+		<option value="한식">한식</option>
+		<option value="양식">양식</option>
+		<option value="일식">일식</option>
+		<option value="중식">중식</option>
+		<option value="유아식 및 아동식">유아식 및 아동식</option>
+		<option value="야채식">야채식</option>
+		<option value="종교식">종교식</option>
+		<option value="땅콩 알레르기">땅콩 알레르기</option>
+	</select>
+
+</div>
+
+</body>
+</html>
