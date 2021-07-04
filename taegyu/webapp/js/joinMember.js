@@ -160,8 +160,19 @@
 		// 명시적으로 form submit 요청 해야함 
 		document.getElementById("joinForm").submit();
 	}
+	
+	/* 아이디 중복확인 새창열기 */
+	function openIdCheckWindow() {
+		var specs = "width=400,height=300,top=300,left=500";
+		var idWin = window.open("duplicateMemberId.html", "_blank", specs);
+	}
+
+	/* 이메일 중복확인 새창열기 */
+	function openEmailCheckWindow() {
+		var specs = "width=600,height=200,top=300,left=500";
+		var emailWin = window.open("duplicateEmail.html", "_blank", specs);
+	}
 		
-			
 	/* 비밀번호 표시 : 보인기 / 감추기 이벤트 
 		1. 비밀번호표시 체크박스 객체 가져오기
 		2. 비밀번호 객체 가져오기
@@ -231,19 +242,6 @@
 			break;
 		}
 	}
-	
-	/* 아이디 중복확인 새창열기 */
-	function openIdCheckWindow() {
-		var specs = "width=400,height=300,top=300,left=500";
-		var idWin = window.open("duplicateMemberId.html", "_blank", specs);
-	}
-	
-	/* 이메일 중복확인 새창열기 */
-	function openEmailCheckWindow() {
-		var specs = "width=600,height=200,top=300,left=500";
-		var emailWin = window.open("duplicateEmail.html", "_blank", specs);
-	}
-	
 	
 	/* 비밀번호확인 포커스를 잃었을때 비밀번호와 동일한지 검증 */
 	function checkMappingMemberPw() {

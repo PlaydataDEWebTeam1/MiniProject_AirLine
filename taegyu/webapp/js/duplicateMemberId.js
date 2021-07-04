@@ -1,8 +1,11 @@
 /**
  * 아이디 중복 자바스크립트 파일 : js/duplicateMemberId.js
  */
-
-
+	/* 아이디 중복확인 새창열기 */
+	function openIdCheckWindow() {
+		var specs = "width=400,height=300,top=300,left=500";
+		var idWin = window.open("duplicateMemberId.html", "_blank", specs);
+	}
 
 	/* 회원들의 아이디 정보를 배열 선언 및 저장 구조 */
 	var memberIdArray = ["user01", "user02", "user03"];

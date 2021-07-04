@@ -1,10 +1,14 @@
 /**
- * 아이디 중복 자바스크립트 파일 : js/duplicateMemberId.js
+ * 이메일 중복 자바스크립트 파일 : js/duplicateEmail.js
  */
 
+	/* 이메일 중복확인 새창열기 */
+	function openEmailCheckWindow() {
+		var specs = "width=600,height=200,top=300,left=500";
+		var emailWin = window.open("duplicateEmail.html", "_blank", specs);
+	}
 
-
-	/* 회원들의 아이디 정보를 배열 선언 및 저장 구조 */
+	/* 회원들의 이메일 정보를 배열 선언 및 저장 구조 */
 	var emailArray = ["user01@work.com", "user02@work.com", "user03@work.com"];
 	
 	/* 윈도우 로드 이벤트 */
@@ -40,16 +44,30 @@
 		var duplicateEmailMsgElement = document.getElementById("duplicateEmailMsg");
 		
 		// emailArray 크기만큼 반복 비교하면서 이메일 존재유무 체킹
-		for (index = 0; index < emailArray.length; index++) {
-			if (emailArray[index] == email) {
-				duplicateEmailMsgElement.innerHTML = "사용불가 이메일입니다.";
-				duplicateEmailMsgElement.style.color = "red";
-				document.getElementById("email3").focus();
-				
-				// 입력데이터 선택
-				document.getElementById("email3").select();
-				return;
+		if (email3 == "" || email3.trim().length == 0) {
+			duplicateEmailMsgElement.innerHTML = "이메일 아이디를 먼저 입력해주세요."
+			duplicateEmailMsgElement.style.color = "red";
+			document.getElementById("email3").focus();
+			return false;
+		} else {			
+			for (index = 0; index < emailArray.length; index++) {
+				if (emailArray[index] == email) {
+					duplicateEmailMsgElement.innerHTML = "사용불가 이메일입니다.";
+					duplicateEmailMsgElement.style.color = "red";
+					document.getElementById("email3").focus();
+					
+					// 입력데이터 선택
+					document.getElementById("email3").select();
+					return;
+				}
 			}
+		}
+		
+		if (email4 == "" || email4.trim().length == 0) {
+			duplicateEmailMsgElement.innerHTML = "이메일 주소를 선택해주세요."
+			duplicateEmailMsgElement.style.color = "red";
+			document.getElementById("email4").focus();
+			return false;
 		}
 		
 		duplicateEmailMsgElement.innerHTML = "사용가능 이메일입니다.";
