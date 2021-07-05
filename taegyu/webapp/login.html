@@ -12,21 +12,26 @@
 </head>
 <body>
 <h2>로그인</h2>
+<form action="loginResult.html" method="post" name="loginForm" id="loginForm">
 <div class="input_title">회원 아이디</div>
 <div>
-	<input type="text" name="email1" id="email1">
+	<input type="text" name="loginMemberId" id="loginMemberId">
+	<span id="loginMemberIdMsg"></span>
 </div>
 <div class="input_title">비밀번호</div>
 <div>
-	<input type="text" name="email1" id="email1">
+	<input type="text" name="loginMemberPw" id="loginMemberPw">
+	<span id="loginMemberPwMsg"></span>
 </div>
 <div>
 	<input type="button" name="btn_login" id="btn_login" value="로그인" onclick="checkLogin()">
+	<input type="button" name="btn_login_cancle" id="btn_login_cancle" value="취소" onclick="clickReset()">
 </div>
 
 <div>
 	<a href="">아이디 찾기 ></a>
 	<a href="">비밀번호 찾기 ></a>
 </div>
+</form>
 </body>
 </html>
