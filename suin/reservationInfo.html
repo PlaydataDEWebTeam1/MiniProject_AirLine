@@ -26,7 +26,7 @@ body { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
 
 <tr>
 <th>KE907</th>
-<th>ICN 인천<br><input type="date" id="boardingDate">13:50</th>
+<th>ICN 인천<br>2021.07.07<br>13:50</th>
 <th>LHR 런던/히드로</th>
 <th>이코노미</th>
 <th>Airbus<br>A380-800</th>
@@ -35,5 +35,39 @@ body { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
 </tr>
 </table>
 
+<br>
+<br>
+
+<h3>부가서비스</h3>
+<div class="table">
+
+	<div class="row1">
+		<span class="cell col1">서비스 종류</span>
+		<span class="cell col2">신청 또는 변경</span>
+		<span class="cell col3">신청 내용</span>
+	</div>
+	
+	<div class="row2"> 
+		<span class="cell col1">기내식 신청</span>
+		<span class="cell col2">
+			<input type="button" value="신청하기" id="btn_meal" onclick="openMealWindow()">
+		</span>
+		
+		<span class="cell col3">
+			<input type="text" value="신청내용 없음" id="input_meal" readonly> 
+		</span>
+	</div>
+	
+	<div class="row3"> 
+		<span class="cell col1">초과수화물 구매 신청</span>
+		<span class="cell col2">
+			<input type="button" value="신청하기" id="btn_baggage" onclick="openBaggageWindow()">
+		</span>
+		<span class="cell col3">
+			<input type="text" value="신청내용 없음" id="input_baggage" readonly>
+		</span>
+	</div>
+	
+</div>
 </body>
 </html>
