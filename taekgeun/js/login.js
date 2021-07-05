@@ -75,7 +75,11 @@ function checkLogin() {
 				}
 			//해당 아이디가 없으면
 			}else{
-				document.querySelector(".pwValid").style.display = 'none';
+
+				if(document.querySelector(".pwValid") != null) {
+					document.querySelector(".pwValid").style.display = 'none';
+					return false;
+				}
 				loginMemberIdMsgElement.innerHTML = "<span class='idValid'>아이디를 다시 확인하시기 바랍니다.</span>";
 				loginMemberIdMsgElement.style.color = "red";
 				document.getElementById("loginMemberId").focus();
