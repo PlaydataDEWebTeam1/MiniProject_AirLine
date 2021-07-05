@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="대한항공 회원정보 보기">
+    <meta name="keywords" content="대한항공, 대한항공 회원정보 보기, 회원정보 보기">
+    <meta name="author" content="vvision">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
+    
+    <link rel="icon" href="img/favicon_air.ico" />
+    <!-- 아이폰용 fabicon 설정 -->
+    <link rel="apple-touch-icon" href="img/favicon_air.ico" />
+    <!-- 인터넷 익스플로어용 fabicon 설정 -->
+    <link rel="shortcut icon" tyle="image/x-icon" href="favicon_air.ico"/>
+    
+    <link rel="stylesheet" href="css/nomarlize.css" />
+    <!-- https://fontawesome.com/start , 아이콘이 곳곳에 쓰일 수 있는데 이걸 태그로 끌어올 수 있음-->
+    <script src="https://kit.fontawesome.com/f1def33959.js" crossorigin="anonymous"></script>
+    <!-- Spoca Han Sans Neo: https://spoqa.github.io/spoqa-han-sans/ko-KR/ -->
+    <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/my-page.css" />
+    <link rel="stylesheet" href="css/header.css">
+    <script src="js/myPage.js"></script>
+ 
+    <title>회원정보 보기 | 대한한공</title>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">
+            <div class="item1-container">
+                <div class="item1-item1">
+                    FIRST
+                </div>
+                <div class="item1-item2">
+                    <img src="img/airport.png" alt="" class="item1-item2-img">
+                </div>
+                <div class="item1-item3">
+                    AIR
+                </div>
+            </div>
+        </div>
+        <div class="item item2">
+            <div>
+                <ul>
+                    <li>예매</li>
+                    <li>공항</li>
+                    <li>기내</li>
+                    <li>스카이패스</li>
+                </ul>
+            </div>
+        </div>
+        <div class="item item3">
+            <div>
+                <ul>
+                    <li>로그아웃</li>
+                    <li>
+                        <img src="img/user.png" alt="" class="item3-img-group">
+                    </li>
+                    <li>
+                        <img src="img/bell.png" alt="" class="item3-img-group">
+                    </li>
+                    <li>
+                        <img src="img/shopping.png" alt="" class="item3-img-group">
+                    </li>
+                    <li>
+                        <img src="img/magnifier.png" alt="" class="item3-img-group">
+                    </li>
+                </ul>
+            </div>
+         </div>  
+        </div>  
+      </div>
+
+
+   
+    <!------------------------------------------------------------헤더 끝-->
+    <div class="main-container">
+        <h2 class="head-name">회원정보 보기</h2>
+
+        <form action="#" >
+         <fieldset class="input-name">
+            <h3 class="head-basic-info">기본정보</h3>
+                <div class="input-key">
+                    <label for="name">성명</label>  <br>
+                    <input type="text" id="name" name="name" readonly>
+                </div>
+
+                <div class="input-key">
+                    <label for="skyno">스카이패스 회원번호</label>  <br>
+                    <input type="text" id="skyno" name="skyno" readonly>
+                </div>
+
+                <div class="input-key">
+                    <label for="id">회원 아이디</label>  <br>
+                    <input type="text" id="id" name="id" value="id" readonly>
+                </div>
+
+                <div class="input-key">
+                    <label for="id">비밀번호</label>  <br>
+                    <input type="password" id="pw" name="pw" value="pw" readonly>
+                </div>
+
+                <div class="input-key">
+                    <label for="gender">성별</label>  <br>
+                    <input type="text" id="gender" name="gender" readonly>
+                </div>
+
+                <div class="input-key">
+                    <label for="birth">생년월일</label>  <br>
+                    <input type="text" id="birth" name="birth" readonly>
+                </div>
+
+                <div class="input-key">
+                    <label for="email">이메일 주소</label>  <br>
+                    <input type="text" id="email" name="email" readonly>
+                </div>
+
+                <div class="input-key">
+                    <label for="phone">휴대전화 번호</label>  <br>
+                    <input type="text" id="phone" name="phone" readonly>
+                </div>
+
+                <div class="input-key">
+                    <label for="country">거주국가/지역</label>  <br>
+                    <input type="text" id="country" name="country" readonly>
+                </div>
+                
+                <div class="input-key">
+                    <label for="country">우편물 수령지</label>  <br>
+                    <input type="text" id="country" name="country" readonly>
+                </div>
+
+                <div class="input-key">
+                    <label for="addr">주소</label>  <br>
+                    <input type="text" id="addr" name="addr" readonly>
+                </div>
+
+                <h3 class="head-adv">마케팅 및 광고 활용 동의 (선택)</h3>
+                <div class="adv-agree">
+                    <div class="adv-item">
+                        <input type="checkbox" class="chk-letter" id="letter" name="letter" disabled>
+                        <label for="letter"><span>뉴스레터 (회원 소식지 등)</span></label>
+                    </div>
+
+                    <div class="adv-item">
+                        <input type="checkbox" class="chk-letter" id="letter" name="letter" disabled>
+                        <label for="letter"><span>프로모션 정보 (이벤트,할인 쿠폰 등)</span></label>
+                    </div>
+
+                    <div class="adv-item">
+                        <input type="checkbox" class="chk-letter" id="letter" name="letter" disabled>
+                        <label for="letter"><span>SMS 수신 동의</span></label>
+                    </div>
+                </div>
+
+                <h3 class="head-private">개인정보 제3자 제공 동의(선택)</h3>
+                <div class="private-3">
+                <span id="private-agree">동의</span>
+                </div>
+          </fieldset>
+        </form>
+
+        <div class="button">
+            <button class="change" id="change">변경</button>
+        </div>
+    </div>
+</body>
+</html>
