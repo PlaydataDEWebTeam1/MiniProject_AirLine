@@ -13,7 +13,7 @@
   margin: 0 auto;
   max-width: 1400px;
   
-  border-bottom: 2px solid #F2E3D5;
+  border-bottom: 1px solid #0045A8;
   
   display: flex;
   box-sizing: border-box;
@@ -47,15 +47,16 @@
 
 .item1 {
   text-align: left;
-  padding-left: 20px;
-  padding-top : 17px;
+  padding-top : 0.6rem;
+  padding-left : 1.5rem;
   width:400px;
   height : 100px;
 }
 
 
 .airport{
-    width: 79px;
+    width: 60px;
+    padding-bottom: 0.5rem;
     
 }
 
@@ -104,6 +105,12 @@
 .container3 h1{
     margin-left: 160px;
 }
+
+.logo{
+    width : 100px;
+    height : 70px;
+}
+
 
 @media only screen and (min-width:1400px){
     .container{
