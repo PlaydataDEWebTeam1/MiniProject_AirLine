@@ -5,7 +5,6 @@ window.addEventListener("load",function(){
         
     };
 
-
     //변경버튼
     const changeButton = document.querySelector("#change");
 
