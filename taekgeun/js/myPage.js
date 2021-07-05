@@ -22,6 +22,5 @@ window.addEventListener("load",function(){
         url = url.concat('id=',id);
         url = url.concat('&pw=',pw);
         location.href=url;
-        
     }
 })
