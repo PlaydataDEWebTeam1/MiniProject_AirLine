@@ -23,7 +23,7 @@
     display:flex;
 }
 .item1-item1{
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     color : #FF96AD;
 }
@@ -33,7 +33,7 @@
     margin-right: 10px;
 }
 .item1-item3{
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
 }
 
@@ -69,18 +69,18 @@
 
 .item2 ul :nth-child(n) {
     margin-right: 70px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color : #707070
     
 }
 .item3 li{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color : #707070;
 }
 .item3-img-group{
-    width:30px;
+    width:22px;
     margin-left: 20px;
 }
 
