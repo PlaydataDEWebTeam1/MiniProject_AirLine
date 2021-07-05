@@ -1,0 +1,127 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>회원가입 | 플레이데이터항공</title>
+
+<!-- js : external -->
+<script type="text/javascript" src="js/joinMember.js"></script>
+
+<script type="text/javascript" src="js/duplicateMemberId.js"></script>
+<script type="text/javascript" src="js/duplicateEmail.js"></script>
+
+<!-- css : external -->
+<link type="text/css" rel="stylesheet" href="css/taegyu.css">
+
+</head>
+
+<body>
+<h3>회원가입</h3>
+<!-- 
+	## form 입력 양식 
+	-- 아이디 : 텍스트 text
+	-- 비밀번호 / 비밀번호 확인 : 비밀번호 password
+	-- 비밀번호 표시 : 체크박스 checkbox
+	-- 이메일: 이메일아이디/도메인주소/도메인선택 checkbox 
+	-- 관심분야 : 체크박스 (항목 5개) chcekbox
+	-- 자기소개 : textarea
+	
+	-- 확인전용버튼 : submit
+	-- 취소전용버튼 : reset
+ -->
+ 
+<!-- 컨텐츠 -->
+<div>
+<form action="result.html" method="post" name="joinForm" id="joinForm">
+	<!-- 이름 -->
+	<div>
+		<div class="input_title">이름</div>
+		<div>
+			<input type="text" name="name" id="name">
+			<span id="nameMsg"></span>
+		</div>
+	</div>
+	
+	<!-- 아이디 검증여부 숨김데이터 -->
+	<input type="hidden" name="checkMemberId" id="checkMemberId" value="FAIL">
+	
+	<!-- 아이디 -->
+	<div>
+		<div class="input_title">아이디</div>
+		<div>
+			<input type="text" name="memberId"  id="memberId">
+			<input type="button" value="아이디 중복" onclick="openIdCheckWindow()">
+			<span id="memberIdMsg"></span>
+		</div>
+	</div>
+		
+	<!-- 비밀번호 -->
+	<div>
+		<div class="input_title">비밀번호</div>
+		<div>
+			<input type="password" name="memberPw" id="memberPw">
+			<span id="memberPwMsg"></span>
+		</div>
+	</div>
+	
+	<!-- 비밀번호확인 -->
+	<div>
+		<div class="input_title">비밀번호 확인</div>
+		<div>
+		<input type="password" name="memberPwConfirm" id="memberPwConfirm"
+			onblur="checkMappingMemberPw()">
+		
+		<input type="checkbox" name="isVisablePassword" id="isVisablePassword"
+			onclick="viewMemberPw()">비밀번호 표시
+		<span id="memberPwConfirmMsg"></span>
+		</div>
+	</div>
+	
+	<!-- 성별 -->
+	<div>
+		<div class="input_title">성별</div>
+		<div>
+			<input type="checkbox" name="sex" id="sex1" value="1" onclick="checkOnlyOne(this)">남자
+			<input type="checkbox" name="sex" id="sex2" value="2" onclick="checkOnlyOne(this)">여자
+			<span id="sexMsg"></span>
+		</div>
+	</div>
+
+	<!-- 이메일 -->
+	<div>
+		<div class="input_title">이메일</div>
+		<div>
+		<input type="text" name="email1" id="email1">
+		<input type="text" name="email2" id="email2">
+		<select name="selectEmail" id="selectEmail" onchange="selectEmailChange(this.value)">
+			<option value="none">= 선택 =</option>
+			<option value="@naver.com">네이버</option>
+			<option value="@gmail.com">구글</option>
+			<option value="@hanmail.net">한메일</option>
+			<option value="userInput">직접입력</option>
+		</select>
+		<input type="button" value="이메일 중복" onclick="openEmailCheckWindow()">
+		<span id="email1Msg"></span>
+		</div>
+	</div>
+	
+	<!-- 휴대폰 번호 -->
+	<div>
+		<div class="input_title">휴대폰 번호</div> 
+		
+		<div>
+			<input type="text" name="mobile" id="mobile">
+			<span id="mobileMsg"></span>
+		</div>
+	</div>
+	
+	<!-- button -->
+	<div>
+		<input type="button" value="회원가입" onclick="checkForm2();">
+		<input type="button" value="취소" onclick="clickReset2()">
+	</div>
+</form>	
+</div>
+ 
+</body>
+</html>

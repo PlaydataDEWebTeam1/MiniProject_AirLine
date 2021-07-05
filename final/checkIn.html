@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+<style type="text/css">
+body { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
+</style>
+<link type="text/css" rel="stylesheet" href="css/suin.css">
+<script type="text/javascript" src="js/suin.js"></script>
+
+<title>체크인</title>
+</head>
+<body>
+<h1>체크인</h1>
+<h3>탑승객 정보</h3>
+<table class="passengerInfo">
+<tr class="table_top_line">
+<th>탑승객 성명</th>
+<th>회원번호</th>
+<th>웹체크인상태</th>
+</tr>
+
+<tr>
+<th><input name="passengerName" id="passengerName"></th>
+<th>회원번호</th>
+<th><input type="text" id="checkInStatus" value="가능" readOnly="true"></th>
+</tr>
+
+<tr>
+<th><input type="button" value="계속" onClick="showPassportInfo();"></th>
+</tr>
+</table>
+
+<div class="passportInfo" id="inputPassportInfo" style="display:none">
+<h3>여권 정보 입력</h3>
+<table>
+<tr>
+<td>
+<div>국적선택</div>
+<select name="nationality" id="nationality">
+<option>==선택==</option>
+<option>Korea(the Republic of)</option>
+<option>US</option>
+<option>France</option>
+<option>Canada</option>
+<option>China</option>
+<option>Japan</option>
+</select>
+</td>
+
+<td>
+<div>성별</div>
+<select name="sex" id="sex">
+<option>==선택==</option>
+<option>여자</option>
+<option>남자</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>
+<div>여권 발급 국가</div>
+<select name="passportIssuingCountry" id="passportIssuingCountry">
+<option>==선택==</option>
+<option>Korea(the Republic of)</option>
+<option>US</option>
+<option>France</option>
+<option>Canada</option>
+<option>China</option>
+<option>Japan</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>
+<div>여권번호</div>
+<input type="text" name="passportNo" id="passportNo">
+</td>
+</tr>
+
+<tr>
+<td>
+<div>여권만료일</div>
+<input type="date" name="passportExpiryDate" id="passportExpiryDate">
+</td>
+</tr>
+
+<tr>
+<td>
+<div>생년월일</div>
+<input type="date" name="birth" id="birth">
+</td>
+</tr>
+
+</table>
+<input type="button" name="btn_passport_info" id="btn_passport_info" value="입력완료" onclick="passportInfoConfirm();">
+</div>
+
+<div name="seatInfo" id="seatInfo" style="display:none">
+<h3>좌석 선택 정보</h3>
+
+<div>선택 좌석: </div>
+<input type="submit" name="submit_check_in" id="submit_check_in" value="체크인완료하기" onclick="passportInfoConfirm();">
+</div>
+<div class="button">
+	<input type="button" value="메인페이지로" onclick="location.href='mainPage.html' ">
+</div>
+</body>
+</html>

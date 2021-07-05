@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="대한항공 회원정보 보기">
+    <meta name="keywords" content="대한항공, 대한항공 회원정보 보기, 회원정보 보기">
+    <meta name="author" content="vvision">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
+    
+    <link rel="icon" href="img/favicon_air.ico" />
+    <!-- 아이폰용 fabicon 설정 -->
+    <link rel="apple-touch-icon" href="img/favicon_air.ico" />
+    <!-- 인터넷 익스플로어용 fabicon 설정 -->
+    <link rel="shortcut icon" tyle="image/x-icon" href="favicon_air.ico"/>
+    
+    <link rel="stylesheet" href="css/nomarlize.css" />
+    <!-- https://fontawesome.com/start , 아이콘이 곳곳에 쓰일 수 있는데 이걸 태그로 끌어올 수 있음-->
+    <script src="https://kit.fontawesome.com/f1def33959.js" crossorigin="anonymous"></script>
+    <!-- Spoca Han Sans Neo: https://spoqa.github.io/spoqa-han-sans/ko-KR/ -->
+    <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/modify.css">
+    <script src="js/modal.js"></script>
+    <script src="js/modify.js"></script>
+      
+    
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">
+            <div class="item1-container">
+                <div>
+                    <img src="image/airport.png" class="airport" alt="">
+                    <img class="logo" src="image/logo.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="item item2">
+            <div>
+                <ul>
+                   <li><a class="notice" href="#" onclick = "openNotice()">공지사항</a></li>
+                    <li><a class="event" href="#" onclick = "openEvent()">이벤트</a></li>
+                    <li><a class="plane" href="#" onclick = "openPlane()">비행기 정보</a></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <div class="item item3">
+            <div>
+                <ul>
+                    <li><a href="mainPage.html">로그아웃</a></li>
+                    <li>
+                        <img src="img/user.png" alt="" class="item3-img-group">
+                    </li>
+                    <li>
+                        <img src="img/bell.png" alt="" class="item3-img-group">
+                    </li>
+                    <li>
+                        <img src="img/shopping.png" alt="" class="item3-img-group">
+                    </li>
+                    <li>
+                        <img src="img/magnifier.png" alt="" class="item3-img-group">
+                    </li>
+                </ul>
+            </div>
+         </div>  
+        </div>  
+      </div>
+
+      <!-- 헤더 끝 -------------------------------------------->
+    
+      <div class="main-container">
+        <h2 class="head-name">회원정보 변경</h2>
+
+        <form action="#" >
+         <fieldset class="input-name">
+
+            <div class="basic-container">
+                <h3 class="head-basic-info">기본정보</h3>
+                    <div class="input-key">
+                        <label for="name">성명</label>  <br>
+                        <input type="text" id="name" name="name" readonly>
+                    </div>
+
+                    <div class="input-key">
+                        <label for="skyno">스카이패스 회원번호</label>  <br>
+                        <input type="text" id="skyno" name="skyno" readonly>
+                    </div>
+
+                    <div class="input-key">
+                        <label for="id">회원 아이디</label>  <br>
+                        <input type="text" id="id" name="id" value="id" readonly>
+                    </div>
+
+                    <div class="input-key">
+                        <label for="id">비밀번호</label>  <br>
+                        <input type="password" id="pw" name="pw" value="pw" readonly>
+                    </div>
+
+                    <div class="input-key">
+                        <label for="gender">성별</label>  <br>
+                        <input type="text" id="gender" name="gender" value="남자" readonly>
+                    </div>
+
+                    <div class="input-key">
+                        <label for="birth">생년월일</label>  <br>
+                        <input type="text" id="birth" name="birth" readonly>
+                    </div>
+              </div>
+
+
+
+
+              
+              <div class="basic-container2">
+                  <h3>기본정보 수정</h3>
+                    <div class="input-key">
+                            <label for="modify-email">이메일 주소</label>  <br>
+                            <input type="text" id="modify-email" name="modify-email" >
+                        </div>
+
+                        <div class="input-key">
+                            <label for="modify-phone">휴대전화 번호</label>  <br>
+                            <input type="text" id="modify-phone" name="modify-phone" >
+                        </div>
+
+                        <div class="input-key">
+                            <label for="modify-country">거주국가/지역</label>  <br>
+                            <input type="text" id="modify-country" name="modify-country" >
+                        </div>
+                        
+                        <div class="input-key">
+                            <label for="modify-package">우편물 수령지</label>  <br>
+                            <input type="text" id="modify-package" name="modify-package" >
+                        </div>
+
+                        <div class="input-key">
+                            <label for="modify-addr">주소</label>  <br>
+                            <input type="text" id="modify-addr" name="modify-addr" >
+                        </div>
+
+                        <h3 class="head-adv">마케팅 및 광고 활용 동의 (선택)</h3>
+                        <div class="adv-agree">
+                            <div class="adv-item">
+                                <input type="checkbox" class="modify-letter" id="modify-letter" name="modify-letter" >
+                                <label for="modify-letter"><span>뉴스레터 (회원 소식지 등)</span></label>
+                            </div>
+
+                            <div class="adv-item">
+                                <input type="checkbox" class="modify-promotion" id="modify-promotion" name="modify-promotion" >
+                                <label for="modify-promotion"><span>프로모션 정보 (이벤트,할인 쿠폰 등)</span></label>
+                            </div>
+
+                            <div class="adv-item">
+                                <input type="checkbox" class="modify-sms-agree" id="modify-sms-agree" name="modify-sms-agree" >
+                                <label for="modify-sms-agree"><span>SMS 수신 동의</span></label>
+                            </div>
+                        </div>
+
+                        <h3 class="head-private">개인정보 제3자 제공 동의(선택)</h3>
+                        <div class="private-3">
+                            <div class="adv-item">
+                                <input type="checkbox" class="private-agree" id="private-agree" name="private-agree" >
+                                <label for="private-agree"><span>개인정보 제3자 제공 동의 및 위탁에 동의합니다.</span></label>
+                            </div>
+                        </div>
+                </fieldset>
+                </form>
+            </div>
+            <div class="verify-button">
+                <div class="button-container">
+                    <button class="verify" id="verify">확인</button>
+                    <button class="cancel" id="cancel">취소</button>
+                </div>
+            </div>
+    </div>
+
+    <!--모달창 : hidden-->
+    <div id="my_modal">
+        <div class="modal_para">회원 정보가 변경되었습니다
+            <div><button class="modify-success" id="modify-success">확인</button></div> 
+        </div>
+        <a class="modal_close_btn">X</a>
+        
+    </div>
+    
+    
+    
+</body>
+</html>

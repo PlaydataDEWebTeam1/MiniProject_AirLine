@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    /*위아래 0 , 좌우 auto로 해두면 항상 가운데로 온다.*/
+    margin:0 auto;
+    color:#3f464d;
+    font-family: "Spoqa Han Sans Neo", "Sans-serif";
+}
+/* a 태그 초기화 */
+a{
+    all : unset;
+}
+a:link{
+    text-decoration: none;
+    color:#3f464d;
+}
+a:visited{
+    text-decoration: none;
+    color:#3f464d;
+}
+a:active{
+    text-decoration: none;
+    color:#3f464d;
+}
+a:hover{
+    text-decoration: none;
+    color:#3f464d;
+}

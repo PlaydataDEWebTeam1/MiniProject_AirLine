@@ -1,0 +1,32 @@
+
+
+#my_modal {
+    display: none;
+    width: 500px;
+    height : 200px;
+    padding: 20px 30px;
+    background-color: #fefefe;
+    border: 1px solid #888;
+    border-radius: 3px;
+}
+
+#my_modal .modal_close_btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.modal_para{
+    text-align: center;
+    margin-top : 2rem;
+    font-size: 1.3rem;
+}
+.modify-success{
+    margin-top : 2rem;
+    width : 206px;
+    height : 55px;
+    background: #013066;
+    color : #fff;
+    border : 1px #D9DBE1 solid;
+    cursor : pointer;
+}

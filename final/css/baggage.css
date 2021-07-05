@@ -1,0 +1,33 @@
+@charset "UTF-8";
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+body {
+	font-family: "Spoqa Han Sans Neo", "Sans-serif";
+}
+
+/* 로고 */
+
+div.mainLogo {
+	display:inline;
+	
+}
+
+img {
+	width : 30px;
+	height: 30px;
+}
+
+/* 전체 위 간격 */
+div {
+	margin-top:10px;
+}
+
+div.selectbox{
+	text-align: center;
+}
+
+select {
+	width : 500px;
+	height : 50px;
+	font-size: 20px;
+}
