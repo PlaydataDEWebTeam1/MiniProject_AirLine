@@ -10,13 +10,14 @@
 <script type="text/javascript" src="js/boardingDate.js"></script>
 <script type="text/javascript" src="js/selectNumberOfMember.js"></script>
 <script type="text/javascript" src="js/searchPlane.js"></script>
+<script type="text/javascript" src="js/impormation.js"></script>
 
 <!-- css external -->
 <link type="text/css" rel="stylesheet" href="css/mainPage.css">
 
 
 </head>
-<h3>메인페이지</h3>
+
 <body>
 
 
@@ -25,16 +26,17 @@
 	<a href="mainPage.html"><img src="images/image1.png"></a>
 </div>
 
-<!-- 공항, 비행기 정보 -->
+<!-- 공지 등 -->
 <div class="impormation">
-	<a class="airport" href="airport.html">공항</a>
-	<a class="planeButton" href="plane.html">비행기</a>
-	<a class="travelButton" href="travel.html">여행지</a>
+	<a class="notice" href="#" onclick = "openNotice()">공지사항</a>
+	<a class="event" href="#" onclick = "openEvent()">이벤트</a>
+	<a class="plane" href="#" onclick = "openPlane()">비행기 정보</a>
 </div>
 
 <!--  로그인 -->
 <div class="login">
 	<a href="login.html">로그인</a>
+	<a href="joinMember.html">회원가입</a>
 </div>
 <hr>
 <br>
@@ -111,9 +113,8 @@
 <br>
 <!--  예약조회, 체크인, 항공편 현황 -->
 <div class="menu">
-	<a class="checkBooking" href="checkBooking">예약조회 선택</a>
-	<a class="checkIn" href="checkIn">체크인</a>
-	<a class="airLineList" href="airLineList">항공편</a>
+	<a class="checkBooking" href="findReservation.html">예약정보 조회</a>
+	<a class="checkIn" href="checkIn.html">체크인</a>
 </div>
 
 </body>
