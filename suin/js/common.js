@@ -14,7 +14,6 @@ function checkInConfirm() {
 
 function openReservationInfo() {
 	window.open("reservationInfo.html","_self");
-	
 }
 
 /** 탑승객 정보 보여주기 */
@@ -22,7 +21,7 @@ function showPassengerInformation() {
 	document.getElementById("inputPassengerInformation").style.diplay="";
 	
 	var parentBoardingDate= window.opener.document.getElementById("boardingDate");
-	var childBoardingDate = document.getElementById("memberId");
+	var childBoardingDate = document.getElementById("boardingDate");
 	childBoardingDate.value = parentBoardingDate.value;
 }
 
@@ -43,7 +42,7 @@ function passportInfoConfirm() {
 	var birth = document.getElementById("birth").value;
 	
 	var confirmMsg = "\n이름: " + name + "\n여권번호: " + passportNo + "\n국적:" + nationality + "\n여권발급국가: " + passportIssuingCountry + "\n성별: "  + sex + "\n여권만료일: " + passportExpiryDate + "\n생년월일: " + birth;
-	var answer = confirm(confirmMsg);
+	var answer = confirm("안내메세지"+confirmMsg);
 	if(answer) {
 		window.open("seatChoice.html","_blank");
 	}
@@ -51,7 +50,28 @@ function passportInfoConfirm() {
 
 /** 탑승권 열 보이기 순서 주의 페이지 열고 디스플레이 바꾸야됨 */
 function showTicketColumn() {
-	window.open("checkIn.html","_self");
-	
+	openWindowReservationInfo.document.getElementById("btn_checkInConfirm").value="완료";
+	/** var ticketCol = document.getElementByClassName("ticket");
+	ticketCol.style.display="";
+	for(i=0; i<ticketCol.length; i++) {
+		var ticket = ticketCol[i]
+		ticket.style.display = "";
+	}*/
+}
+
+function openReservationInfo(){
+	openWindowReservationInfo = window.open("reservationInfo.html","_self");
 	
 }
+
+function showSeatInfo() {
+	alert("좌석");
+	var selectSeatInfo = document.getElementById("seat").value;
+	document.getElementById("seatInfo").innerHTML = selectSeatInfo;
+}
+
+
+
+
+
+
