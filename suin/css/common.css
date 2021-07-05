@@ -18,6 +18,7 @@ table.check_in, table.passengerInfo {
 	width: 600px;
 	height: 100px;
 	margin: 20px 0;
+	table-layout: fixed;
 }
 
 tr.table_top_line {
@@ -25,7 +26,15 @@ tr.table_top_line {
 	color: white;
 }
 
-img {
+table.fightSchedule {
+	height:400px;
+	width: 700px;
+	table-layout: fixed;
+	
+}
+
+
+img.seatImg {
 	width: 30px;
 	height: 30px;
 }
