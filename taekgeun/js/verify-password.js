@@ -4,6 +4,14 @@ window.addEventListener("load",() => {
     const id = getParameterByName('id');
     //비교할 비밀번호
     const comparePw = getParameterByName('pw');
+    const name = getParameterByName('name');
+    
+    const sex = getParameterByName('sex');
+    const email = getParameterByName('email');
+    const mobile = getParameterByName('mobile');
+    const birth = getParameterByName('birth');
+
+
 
     //취소버튼 
     const cancelButton = document.querySelector("#cancel");
@@ -12,7 +20,7 @@ window.addEventListener("load",() => {
 
     
     //주소창에 파라미터 값 지우기
-   // history.replaceState({}, null, location.pathname);
+    history.replaceState({}, null, location.pathname);
 
     //회원 아이디창에 아이디 나타내기
     document.querySelector("#mem-id").value = id;
@@ -55,7 +63,18 @@ window.addEventListener("load",() => {
         
         //비밀번호 일치
          }else{
-            location.href = "modify.html";
+            var url = "modify.html?"
+
+            url = url.concat('id=',id,'&');
+            url = url.concat('pw=',comparePw,'&');
+            url = url.concat('sex=',sex,'&');
+            url = url.concat('email=',email,'&');
+            url = url.concat('mobile=',mobile,'&');
+            url = url.concat('name=',name,'&');
+            url = url.concat('birth=',birth)
+            alert(url);
+            location.href = url;
+
             return false;
          }
       
@@ -64,6 +83,7 @@ window.addEventListener("load",() => {
 })
 
 
+/* 파라미터 받아 오기 */
 function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),

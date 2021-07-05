@@ -9,9 +9,9 @@
 //	var user01Array = ["이순신", "password03", "남", "user03@work.com", "010-1234-5680"];
 	
 const memberArray = [
-	{name : "홍길동", memberId : "user01", memberPw : "password01", sex : "남", email : "user01@work.com", mobile : "010-1234-5678"},
-	{name : "신사임당", memberId : "user02", memberPw : "password02", sex : "여", email : "user02@work.com", mobile : "010-1234-5679"},
-	{name : "이순신", memberId : "user03", memberPw : "password03", sex : "남", email : "user03@work.com", mobile : "010-1234-5680"},
+	{name : "홍길동", memberId : "user01", memberPw : "password01", sex : "남자", email : "user01@work.com", mobile : "010-1234-5678", birth : "1995-10-09"},
+	{name : "신사임당", memberId : "user02", memberPw : "password02", sex : "여자", email : "user02@work.com", mobile : "010-1234-5679", birth : "1995-10-01"},
+	{name : "이순신", memberId : "user03", memberPw : "password03", sex : "남자", email : "user03@work.com", mobile : "010-1234-5680",  birth : "1995-10-11"},
 ]
 
 /* 윈도우 로드 이벤트 함수 */
@@ -56,16 +56,18 @@ function checkLogin() {
 					if(document.querySelector(".idValid") != null && document.querySelector(".pwValid") ){
 						document.querySelector(".pwValid").style.display = 'none'
 						document.querySelector(".idValid").style.display = 'none'
-						location.href="joinMember.html";
+						loginSuccess(sameIdMem);
 						return false;
 					}else{
-						location.href="joinMember.html";
+						loginSuccess(sameIdMem);
+						return false;
 					}
+
 				//비밀번호 불일치
 				}else{
 					if(document.querySelector(".idValid") != null){
 						document.querySelector(".idValid").style.display = 'none';
-						return false;
+						
 					}
 					loginMemberPwMsgElement.innerHTML = "<span class='pwValid'>비밀번호를 다시 확인하시기 바랍니다.</span>";
 					loginMemberPwMsgElement.style.color = "red";
@@ -75,11 +77,12 @@ function checkLogin() {
 				}
 			//해당 아이디가 없으면
 			}else{
-
+				
 				if(document.querySelector(".pwValid") != null) {
 					document.querySelector(".pwValid").style.display = 'none';
-					return false;
+					
 				}
+
 				loginMemberIdMsgElement.innerHTML = "<span class='idValid'>아이디를 다시 확인하시기 바랍니다.</span>";
 				loginMemberIdMsgElement.style.color = "red";
 				document.getElementById("loginMemberId").focus();
@@ -107,4 +110,28 @@ function initForm() {
 function clearMsg() {
 	document.getElementById("loginMemberIdMsg").innerHTML = "";
 	document.getElementById("loginMemberPwMsg").innerHTML = "";
+}
+
+
+
+
+/* 파라미터로 값 넘겨주기 */
+function loginSuccess(member){
+	
+	/*위치 수정 필요 */
+	var url = "../../mainPageLogin.html?"
+
+	
+	url = url.concat('id=',member.memberId,'&');
+	url = url.concat('pw=',member.memberPw,'&');
+	url = url.concat('sex=',member.sex,'&');
+	url = url.concat('email=',member.email,'&');
+	url = url.concat('mobile=',member.mobile,'&');
+	url = url.concat('name=',member.name,'&');
+	url = url.concat('birth=',member.birth);
+	
+
+	location.href=url;
+	
+	return false;
 }

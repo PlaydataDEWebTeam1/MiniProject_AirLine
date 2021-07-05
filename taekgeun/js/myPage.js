@@ -1,19 +1,32 @@
 window.addEventListener("load",function(){
     
-    //회원정보 초기화
-    const memInfo = {
-        
-    };
+    //회원정보 
+    const name = getParameterByName('name');
+    const memberId = getParameterByName('id');
+    const memberPw = getParameterByName('pw');
+    const sex = getParameterByName('sex');
+    const email = getParameterByName('email');
+    const mobile = getParameterByName('mobile');
+    const birth = getParameterByName('birth');
+
+    history.replaceState({}, null, location.pathname);
 
     //변경버튼
     const changeButton = document.querySelector("#change");
 
-    //아이디
-    document.querySelector("#id").value = "SWIFT09";
-    document.querySelector("#pw").value="123456";
+    
+    document.querySelector("#id").value = memberId;
+    document.querySelector("#pw").value=memberPw;
+    document.querySelector("#name").value=name;
+    document.querySelector("#gender").value=sex;
+    document.querySelector("#birth").value=birth;
+    document.querySelector("#email").value=email;
+    document.querySelector("#phone").value = mobile;
+
 
     const id = document.querySelector("#id").value;
     const pw = document.querySelector("#pw").value;
+    
 
 
     changeButton.onclick = function(){
@@ -23,3 +36,11 @@ window.addEventListener("load",function(){
         location.href=url;
     }
 })
+
+/* 파라미터 받아 오기 */
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
