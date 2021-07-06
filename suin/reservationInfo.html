@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+<style type="text/css">
+body { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
+</style>
+<link type="text/css" rel="stylesheet" href="css/common.css">
+<script type="text/javascript" src="js/common.js"></script>
+
+<title>예약정보</title>
+</head>
+<body>
+<h1>예약정보</h1>
+<table class="check_in">
+<tr class="table_top_line">
+<th>편명</th>
+<th>출발지</th>
+<th>도착지</th>
+<th>클래스</th>
+<th>기종</th>
+<th>체크인</th>
+<th  class="ticket" style="display: none">탑승권</th>
+</tr>
+
+<tr>
+<th>KE907</th>
+<th>ICN 인천<br>2021.07.07<br>13:50</th>
+<th>LHR 런던/히드로</th>
+<th>이코노미</th>
+<th>Airbus<br>A380-800</th>
+<th><input type="button" name="btn_checkInConfirm" id="btn_checkInConfirm" value="가능" onClick="window.open('checkIn.html','_self')"></th>
+<th class="ticket" style="display: none"><input type="button" id="btn_ticket" value="조회/출력"></th>
+</tr>
+</table>
+
+<br>
+<br>
+
+<h3>부가서비스</h3>
+<div class="table">
+
+	<div class="row1">
+		<span class="cell col1">서비스 종류</span>
+		<span class="cell col2">신청 또는 변경</span>
+		<span class="cell col3">신청 내용</span>
+	</div>
+	
+	<div class="row2"> 
+		<span class="cell col1">기내식 신청</span>
+		<span class="cell col2">
+			<input type="button" value="신청하기" id="btn_meal" onclick="openMealWindow()">
+		</span>
+		
+		<span class="cell col3">
+			<input type="text" value="신청내용 없음" id="input_meal" readonly> 
+		</span>
+	</div>
+	
+	<div class="row3"> 
+		<span class="cell col1">초과수화물 구매 신청</span>
+		<span class="cell col2">
+			<input type="button" value="신청하기" id="btn_baggage" onclick="openBaggageWindow()">
+		</span>
+		<span class="cell col3">
+			<input type="text" value="신청내용 없음" id="input_baggage" readonly>
+		</span>
+	</div>
+	
+</div>
+</body>
+</html>

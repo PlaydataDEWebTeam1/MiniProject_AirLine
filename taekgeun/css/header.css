@@ -1,0 +1,137 @@
+.item.item2 ul li{
+    list-style: none;
+    padding-left: 0px;
+    float : left;
+  }
+.item.item3 ul li{
+    list-style: none;
+    padding-left: 0px;
+    float : left;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1400px;
+  
+  border-bottom: 1px solid #0045A8;
+  
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-around;
+}
+.item1-container {
+    display:flex;
+}
+.item1-item1{
+    font-size: 25px;
+    font-weight: bold;
+    color : #FF96AD;
+}
+.item1-item2-img{
+    width:55px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.item1-item3{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.item {
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 50px;
+  background-color: white;      
+  border-radius: 10px;
+}
+
+.item1 {
+  text-align: left;
+  padding-top : 0.6rem;
+  padding-left : 1.5rem;
+  width:400px;
+  height : 100px;
+}
+
+
+.airport{
+    width: 60px;
+    padding-bottom: 0.5rem;
+    
+}
+
+.item2 {
+    width: 650px;
+    
+  }
+.item3{
+    width:450px;
+}
+
+.item2 ul :nth-child(n) {
+    margin-right: 70px;
+    font-size: 18px;
+    font-weight: bold;
+    color : #707070
+    
+}
+.item3 li{
+    font-size: 18px;
+    font-weight: bold;
+    color : #707070;
+}
+.item3-img-group{
+    width:22px;
+    margin-left: 20px;
+}
+
+/* container2 시작*/
+.container2{
+    display: flex;
+}
+.container2 ul{
+    margin-left: 6rem;
+}
+.ct2-item.item1{
+    color : #707070;
+    font-size: 14px;
+    font-weight: bold;
+}
+/* container3 시작*/
+.container3{
+    display: flex;
+    flex-direction: column;
+}
+.container3 h1{
+    margin-left: 160px;
+}
+
+.logo{
+    width : 100px;
+    height : 70px;
+}
+
+
+@media only screen and (min-width:1400px){
+    .container{
+        max-width:1400px;
+    }
+}
+@media only screen and (max-width:1140px){
+    .item.item2{
+        display : none;
+    }
+   
+    .item.item3 ul li:nth-child(3){
+        display : none;
+    }
+    .item.item3 ul li:nth-child(4){
+        display : none;
+    }
+    .item.item3 ul li:nth-child(5){
+        display : none;
+    }
+    .item3{
+        width:250px;
+    }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>로그인 | 플레이데이터항공</title>
+<!-- js : external -->
+<script type="text/javascript" src="js/login.js"></script>
+
+<!-- css : external -->
+<link type="text/css" rel="stylesheet" href="css/taegyu.css">
+
+</head>
+<body>
+<h2>로그인</h2>
+<form action="loginResult.html" method="post" name="loginForm" id="loginForm">
+<div class="input_title">회원 아이디</div>
+<div>
+	<input type="text" name="loginMemberId" id="loginMemberId">
+	<span id="loginMemberIdMsg"></span>
+</div>
+<div class="input_title">비밀번호</div>
+<div>
+	<input type="text" name="loginMemberPw" id="loginMemberPw">
+	<span id="loginMemberPwMsg"></span>
+</div>
+<div>
+	<input type="button" name="btn_login" id="btn_login" value="로그인" onclick="checkLogin()">
+	<input type="button" name="btn_login_cancle" id="btn_login_cancle" value="취소" onclick="clickReset()">
+</div>
+
+</form>
+</body>
+</html>

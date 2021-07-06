@@ -1,0 +1,41 @@
+@charset "UTF-8";
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+h1 {
+	margin: 0 0 60px 0;
+}
+
+input.info {
+	font-size: 15px;
+	width: 600px;
+	height: 40px;
+	margin: 0 0 20px 0;
+}
+
+
+table.check_in, table.passengerInfo {
+	border: 1px, solid;
+	width: 600px;
+	height: 100px;
+	margin: 20px 0;
+	table-layout: fixed;
+}
+
+tr.table_top_line {
+	background-color: #1b4a92;
+	color: white;
+}
+
+table.fightSchedule {
+	height:400px;
+	width: 700px;
+	table-layout: fixed;
+	
+}
+
+
+img.seatImg {
+	width: 30px;
+	height: 30px;
+}
+

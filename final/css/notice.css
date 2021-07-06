@@ -1,0 +1,13 @@
+@charset "UTF-8";
+body {
+	@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+}
+
+h1 {
+	 margin-left: 15px;
+}
+
+p {
+    font-size: 20px;
+    margin-left: 15px;
+}

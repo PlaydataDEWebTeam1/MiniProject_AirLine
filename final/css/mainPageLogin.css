@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+body {
+	font-family: "Spoqa Han Sans Neo", "Sans-serif";
+}
+
+
+/* 로고 */
+
+div.mainLogo {
+	display:inline;
+	
+}
+
+
+/* 전체 위 간격 */
+div {
+	margin-top:10px;
+}
+
+img.plane {
+	width:90% ;
+	height:90%;
+	
+}
+
+div.total{
+	width:100%;
+	height:500px;
+	
+	
+	
+}
+div.imageBox {
+	width:65%;
+	height:500px;
+	text-align:center;
+	float:left;
+	
+}
+
+div.textBox {
+	width:25%;
+	height:500px;
+	
+	float:right;
+	padding-right:90px;
+}
+
+
+/* 공항, 비행기, 여행지 정보 */
+
+/* 모든 a 태그 밑줄 제거 */
+a {
+	text-decoration:none;
+	
+}
+
+a.joinMember {
+	margin-left:30px;
+	
+}
+
+div.impormation {
+	
+	display:inline;
+	position: absolute;
+	left: 40%
+	
+}
+
+
+
+/* 로그인 버튼 */
+div.login {
+	display:inline;
+	float:right;
+}
+
+
+/* 출발지, 도착지 */
+div.start_end {
+	text-align: right;	
+	
+}
+
+/* 탑승일 도착일 */
+div.boardingDate {
+	text-align: right;	
+}
+
+/* 인원수 선택 */
+div.selectNumberOfMember {
+	text-align: right;	
+}
+
+/* 좌석 등급 선택 */
+div.selectSeat {
+	text-align: right;
+}
+
+/*예약조회, 체크인, 항공편 현황 */
+div.menu {
+	text-align:center;
+	
+} 
+a.myPage {
+	margin-left:10px;
+	
+}
+
+a.checkIn{
+	margin-left:30px;
+}
+
+a.airLineList{
+	margin-left:30px;
+}
+
+a.flightStatus{
+	margin-left:30px;
+}
+/* 비행기 조회 버튼 */
+
+div.button{
+	text-align:right;
+}
+
+

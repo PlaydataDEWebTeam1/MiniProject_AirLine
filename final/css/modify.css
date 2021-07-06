@@ -1,0 +1,150 @@
+/* 모든 a 태그 밑줄 제거 */
+a {
+	text-decoration:none;
+	
+}
+
+.basic-container{
+    border-bottom: 3px solid #969696;
+    margin-bottom: 3rem;
+    padding-bottom : 3rem;
+}
+
+.verify-button{
+    display:flex;
+    margin-top: 4rem;
+    width: 100%;
+    justify-content: space-around;
+    padding-bottom: 2rem;
+}
+.verify-button button{
+    width : 306px;
+    height : 55px;
+}
+
+.verify-button .verify{
+    background: #013066;
+    color : #fff;
+    border : 1px #D9DBE1 solid;
+}
+.verify-button .verify:hover{
+   cursor : pointer;
+   border: 4px groove #fff;
+}
+.verify-button .cancel{
+    background: #fff;
+    color : #013066;
+    border : 1px #D9DBE1 solid;
+}
+.verify-button .cancel:hover{
+   cursor : pointer;
+   border: 2px groove #013066;
+}
+
+.main-container{
+    margin: 0 auto;
+    max-width: 1200px; 
+}
+
+label{
+    font-size:0.85rem;
+    color: black;
+}
+.input-name{
+    margin: 0 3rem;
+}
+
+.input-name input[type=text]{
+    border : none;
+}
+.basic-container input[type=text]{
+    pointer-events: none;
+}
+.input-name input[type=password]{
+    border : none;
+    pointer-events: none;
+}
+
+.input-name input[type=password]:focus{
+    border : none;
+}
+.input-name input[type=password]:hover{
+    border : none;
+}
+
+
+
+.input-name input[type=text]:focus{
+    border : none;
+}
+.input-name input[type=text]:hover{
+    border : none;
+}
+
+.basic-container2 input[type=text]{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border : none;
+    border-bottom:1px #D9DBE1 solid;
+}
+
+.basic-container2 input[type=text]:hover{
+    outline: 1px solid #0153B2;
+    transition: 0.1s;
+    transform : translate(0,-1px);
+    padding-left: 10px;
+}
+
+
+.basic-container2  input:focus{
+    outline: 1px solid #0153B2;
+}
+
+.input-name .input-key{
+    margin-top : 2.5rem;
+    border-bottom:1px #D9DBE1 solid;
+}
+.input-name {
+    border : 1px #D9DBE1 solid;
+    padding : 0 20px 30px 30px;
+}
+.head-name{
+    margin-left: 3rem;
+}
+.input-key label{
+    display: block;
+    margin-bottom: 0.1rem;
+    pointer-events: none;
+    color : #767676;
+}
+
+.head-private{
+    margin-top : 5rem;
+    margin-bottom: 1.5rem;
+}
+
+.head-adv{
+    margin-top : 5rem;
+    margin-bottom: 1.5rem;
+}
+.head-basic-info{
+    margin-top : 1.4rem;
+    margin-bottom: 0;
+}
+
+.adv-agree{
+    margin-top : 1.5rem;
+}
+
+input[type=checkbox]{
+    width: 17px;
+    height: 17px;
+}
+.adv-item{
+    margin-bottom: 1.5rem;
+}
+
+#private-agree{
+    color:#767777;
+}

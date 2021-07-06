@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>로그인 페이지</title>
+
+<!-- js : external -->
+<script type="text/javascript" src="js/startingPoint.js"></script>
+<script type="text/javascript" src="js/departure.js"></script>
+<script type="text/javascript" src="js/boardingDate.js"></script>
+<script type="text/javascript" src="js/selectNumberOfMember.js"></script>
+<script type="text/javascript" src="js/searchPlane.js"></script>
+<script type="text/javascript" src="js/impormation.js"></script>
+<script src="js/mainPage.js"></script>
+<!-- css external -->
+<link type="text/css" rel="stylesheet" href="css/mainPageLogin.css">
+<link rel="stylesheet" href="css/header.css">
+</head>
+
+<body>
+<div class="container">
+        <div class="item item1">
+            <div class="item1-container">
+                <div>
+                    <img src="image/airport.png" class="airport" alt="">
+                    <img class="logo" src="image/logo.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="item item2">
+            <div>
+                <ul>
+                    <li><a class="notice" href="#" onclick = "openNotice()">공지사항</a></li>
+                    <li><a class="event" href="#" onclick = "openEvent()">이벤트</a></li>
+                    <li><a class="plane" href="#" onclick = "openPlane()">비행기 정보</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="item item3">
+            <div>
+                <ul>
+                    <li><a href="mainPage.html">로그아웃</a></li>
+                    <li>
+                        <a class="myPage" id = "myPage" href="javascript:void(0)">마이페이지</a>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                </ul>
+            </div>
+         </div>  
+        </div>  
+
+
+<br>
+
+<div class="total">
+<div class="imageBox">
+<img class="plane" src="image/plane.jpg">
+</div>
+
+<div class="textBox">
+<!-- 출발지, 도작치 -->
+<div class="start_end"> 
+	<div>
+	<a href="#" onclick = "openStartPointWindow()">출발지 선택 </a>
+	<br>
+	<input type="text" id="startingPoint" value="서울/인천" readonly>
+	</div>
+	
+	<div>
+	<a href="#" onclick = "openDepartureWindow()">도착지 선택</a>
+	<br>
+	<input type="text" id="departure" value="도착지" readonly>
+	</div>
+	
+</div>
+
+<!--  탑승일, 도착일 선택
+달력이 나오고 하나 누르면 편도, 두개 누르면 왕복
+ -->
+<div class="boardingDate">
+	<a href="#" onclick = "openBoardingDateWindow()">탑승일</a>
+	<br>
+	<span>가는 날</span>
+	<input type="text" id="goDate" readonly>
+	<br>
+	<br>
+	<span>오는 날</span>
+	<input type="text" id="comeDate" readonly>
+</div>
+
+<!-- 인원수 선택 
+성인 소아 유아
+-->
+<div class="selectNumberOfMember">
+	<a href="#" onclick = "openNumberWindow()">인원수 선택</a>
+	<br>
+	<div>
+	<span>성인</span>
+	<input type="text" id="adultNumber" value="1" readonly>
+	</div>
+	
+	<div>
+	<span>소아</span>
+	<input type="text" id="childNumber" readonly>
+	</div>
+	
+	<div>
+	<span>유아</span>
+	<input type="text" id="babyNumber" readonly>
+	</div>
+	
+</div>
+
+<!--  좌석 등급 선택  -->
+<div class="selectSeat">좌석 등급 선택</div>
+<div class="selectSeat">
+	<select>
+		<option>좌석선택</option>
+		<option>이코노미석</option>
+		<option>비지니스석</option>
+		<option>퍼스트석</option>
+	</select>
+</div>
+
+
+<!-- 비행기 조회 -->
+<div class="button">
+	<input type="button" value="비행기조회" onclick="openSearchPlaneWindow()">
+</div>
+</div>
+</div>
+
+<br>
+<hr>
+<div>
+<!--  예약조회, 체크인, 항공편 현황 -->
+<div class="menu">
+	<a class="checkBooking" href="reservationInfo.html">예약정보 조회</a>
+	<a class="checkIn" href="checkIn.html">체크인</a>
+	<a class="flightStatus" href="flightStatus.html">항공편 현황</a>
+</div>
+</div>
+</body>
+</html>
